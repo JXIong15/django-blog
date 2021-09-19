@@ -1,11 +1,14 @@
 {% extends './base.html' %}
 {% block content %}
-<h2>Post Recipe</h2>
-<form method="post">
-<div>
-  {% csrf_token %}
-  <p>Are you sure you want to delete "{{ object }}"?</p>
-  <input type="submit" value="Confirm" />
+<div class="form">
+  <h2>Delete Post</h2>
+  <form method="post">
+  <div>
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+    <input class="del-btn" type="submit" value="Confirm" />
+  </div>
+  </form>
+  {% comment %} ADD CANCEL BTN {% endcomment %}
 </div>
-</form>
 {% endblock %}
