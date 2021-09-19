@@ -18,6 +18,11 @@ body {
   font-size: 40px;
   text-align: center;
   background: white;
+  padding-bottom: 50px;
+}
+
+h2 {
+  margin-bottom: 10px;
 }
 
 .leftcolumn {   
@@ -37,6 +42,33 @@ body {
   clear: both;
 }
 
+.header-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-row {
+  display: flex;
+  justify-content: right;
+}
+
+.btn {
+  margin-right: 5px;
+  background-color: blue;
+  padding: 10px;
+  color: white;
+  font-size: medium;
+  border-radius: 10px;
+}
+
+.del-btn {
+  background-color: red;
+  padding: 10px;
+  color: white;
+  font-size: medium;
+  border-radius: 10px;
+}
+
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
     width: 100%;
@@ -51,6 +83,9 @@ body {
 <a href="{% url 'index' %}">
   <h2>Jou's Blog</h2>
 </a>
+  <a href="{% url 'postcreate' %}">
+    <button class="btn">Create Post</button>
+  </a>
 </div>
 
 {% block content %}

@@ -1,22 +1,28 @@
 {% extends './base.html' %}
 {% block content %}
 
-<a href="{% url 'postupdate' post.id %}">
-<button>Update Post</button>
-</a>
-
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
+
+      <div class="header-row">
         <h1>{{post.title}}</h1>
+        <div class="btn-row">
+          <a href="{% url 'postupdate' post.id %}">
+            <button class="btn">Update Post</button>
+          </a>
+          <a href="{% url 'postdelete' post.id %}">
+            <button class="del-btn">Delete Post</button>
+          </a>
+        </div>
+      </div>
+        
         <h5>{{post.created_at}}</h5>
         <p>{{post.body}}</p>
     </div>
   </div>
 </div>
 
-<a href="{% url 'postdelete' post.id %}">
-<button>Delete Post</button>
-</a>
+
 
 {% endblock %}
