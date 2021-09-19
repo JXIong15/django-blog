@@ -1,6 +1,10 @@
 {% extends './base.html' %}
 {% block content %}
 
+<a href="{% url 'postupdate' post.id %}">
+<button>Update Post</button>
+</a>
+
 <div class="row">
   <div class="leftcolumn">
     <div class="card">
@@ -10,5 +14,9 @@
     </div>
   </div>
 </div>
+
+<a href="{% url 'postdelete' post.id %}">
+<button>Delete Post</button>
+</a>
 
 {% endblock %}

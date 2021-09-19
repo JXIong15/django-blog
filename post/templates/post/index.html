@@ -1,6 +1,10 @@
 {% extends './base.html' %}
 {% block content %}
 
+<a href="{% url 'postcreate' %}">
+<button>Create Post</button>
+</a>
+
 <div class="row">
   <div class="leftcolumn">
     {% for post in posts reversed %}
