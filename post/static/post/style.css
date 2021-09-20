@@ -15,6 +15,16 @@
     background: white;
     padding-bottom: 50px;
   }
+
+  .logout-button {
+    background-color: rgb(240, 143, 143);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 90%;
+    font-size: medium;
+  }
   
   h2 {
     margin-bottom: 10px;

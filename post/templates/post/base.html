@@ -9,14 +9,18 @@
 <body>
 
 <div class="header">
-<a href="{% url 'index' %}">
-  <h2>Jou's Blog</h2>
-</a>
-  <a href="{% url 'postcreate' %}">
-    <button class="btn">Create Post</button>
-  </a>
+  {% if user.username %}
+    <a class="logout-button" href="{% url 'logout' %}">Log Out</a>
+  {% endif %}
+  <div>
+    <a href="{% url 'index' %}">
+      <h2>Jou's Blog</h2>
+    </a>
+    <a href="{% url 'postcreate' %}">
+      <button class="btn">Create Post</button>
+    </a>
+  </div>
 </div>
-
 {% block content %}
 {% endblock %}
 
